@@ -54,19 +54,16 @@ namespace DBCViewer
                 uint build = reader.ReadUInt32();       // new field in WDB2
                 uint unk1 = reader.ReadUInt32();        // new field in WDB2
 
-                if (build > 12880) // new extended header
-                {
-                    int MinId = reader.ReadInt32();     // new field in WDB2
-                    int MaxId = reader.ReadInt32();     // new field in WDB2
-                    int locale = reader.ReadInt32();    // new field in WDB2
-                    int unk5 = reader.ReadInt32();      // new field in WDB2
+                int MinId = reader.ReadInt32();     // new field in WDB2
+                int MaxId = reader.ReadInt32();     // new field in WDB2
+                int locale = reader.ReadInt32();    // new field in WDB2
+                int unk5 = reader.ReadInt32();      // new field in WDB2
 
-                    if (MaxId != 0)
-                    {
-                        var diff = MaxId - MinId + 1;   // blizzard is weird people...
-                        reader.ReadBytes(diff * 4);     // an index for rows
-                        reader.ReadBytes(diff * 2);     // a memory allocation bank
-                    }
+                if (MaxId != 0)
+                {
+                    var diff = MaxId - MinId + 1;   // blizzard is weird people...
+                    reader.ReadBytes(diff * 4);     // an index for rows
+                    reader.ReadBytes(diff * 2);     // a memory allocation bank
                 }
 
                 m_rows = new byte[RecordsCount][];
