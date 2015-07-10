@@ -199,6 +199,7 @@ namespace DBCViewer
                         m_dataTable.Columns.Add(colName, typeof(double));
                         break;
                     case "string":
+                    case "intarray":
                         m_dataTable.Columns.Add(colName, typeof(string));
                         break;
                     default:
