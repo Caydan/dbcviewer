@@ -283,25 +283,5 @@ namespace DBCViewer
         {
             Plugins[(int)obj].Run(m_dataTable);
         }
-
-        private static int GetFieldsCount(XmlNodeList fields)
-        {
-            int count = 0;
-            foreach (XmlElement field in fields)
-            {
-                switch (field.Attributes["type"].Value)
-                {
-                    case "long":
-                    case "ulong":
-                    case "double":
-                        count += 2;
-                        break;
-                    default:
-                        count++;
-                        break;
-                }
-            }
-            return count;
-        }
     }
 }
