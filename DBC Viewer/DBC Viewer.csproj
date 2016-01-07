@@ -112,6 +112,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Readers\ADBReader.cs" />
+    <Compile Include="Readers\DB4SparseReader.cs" />
     <Compile Include="Readers\DB4Reader.cs" />
     <Compile Include="Readers\DB3Reader.cs" />
     <Compile Include="Readers\DB2Reader.cs" />

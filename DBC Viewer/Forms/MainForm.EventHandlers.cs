@@ -68,7 +68,7 @@ namespace DBCViewer
             }
             else
             {
-                if (!(m_dbreader is WDBReader) && !(m_dbreader is STLReader))
+                if (!(m_dbreader is WDBReader) && !(m_dbreader is STLReader) && !(m_dbreader is DB4SparseReader))
                     val = (uint)(from k in m_dbreader.StringTable where string.Compare(k.Value, (string)value, StringComparison.Ordinal) == 0 select k.Key).FirstOrDefault();
             }
 
@@ -81,7 +81,13 @@ namespace DBCViewer
 
             try
             {
-                sb.AppendFormat(culture, "String: {0}{1}", !(m_dbreader is WDBReader) ? m_dbreader.StringTable[(int)val] : String.Empty, Environment.NewLine);
+                string strval;
+                if (!(m_dbreader is DB4SparseReader))
+                    strval = !(m_dbreader is WDBReader) ? m_dbreader.StringTable[(int)val] : String.Empty;
+                else
+                    strval = (string)value;
+
+                sb.AppendFormat(culture, "String: {0}{1}", strval, Environment.NewLine);
             }
             catch
             {
@@ -187,7 +193,7 @@ namespace DBCViewer
                                 dataRow[j] = br.ReadDouble();
                                 break;
                             case "string":
-                                if (m_dbreader is WDBReader)
+                                if (m_dbreader is WDBReader || m_dbreader is DB4SparseReader)
                                     dataRow[j] = br.ReadStringNull();
                                 else if (m_dbreader is STLReader)
                                 {

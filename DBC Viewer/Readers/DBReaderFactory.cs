@@ -25,7 +25,14 @@ namespace DBCViewer
                     }
                     catch
                     {
-                        reader = new DB4Reader(file);
+                        try
+                        {
+                            reader = new DB4Reader(file);
+                        }
+                        catch
+                        {
+                            reader = new DB4SparseReader(file);
+                        }
                     }
                 }
             else if (ext == ".ADB")

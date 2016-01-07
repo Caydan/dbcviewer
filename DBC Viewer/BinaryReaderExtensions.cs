@@ -180,5 +180,19 @@ namespace DBCViewer
             return returnObject;
         }
         #endregion
+
+        #region ReadBytesAt
+        /// <summary>
+        ///  Reads a byte array from the stream at given position without changing current stream position.
+        /// </summary>
+        public static byte[] ReadBytesAt(this BinaryReader reader, long position, int count)
+        {
+            var currentPos = reader.BaseStream.Position;
+            reader.BaseStream.Position = position;
+            var bytes = reader.ReadBytes(count);
+            reader.BaseStream.Position = currentPos;
+            return bytes;
+        }
+#endregion
     }
 }
