@@ -14,6 +14,7 @@ namespace DBCViewer
         public int FieldsCount { get; private set; }
         public int RecordSize { get; private set; }
         public int StringTableSize { get; private set; }
+        public bool HasSeparateIndexColumn { get; private set; }
 
         public Dictionary<int, string> StringTable { get; private set; }
 
@@ -64,9 +65,9 @@ namespace DBCViewer
 
                 // Index table
                 int[] m_indexes = null;
-                bool hasIndex = stringTableEnd + CopyTableSize < reader.BaseStream.Length;
+                HasSeparateIndexColumn = stringTableEnd + CopyTableSize < reader.BaseStream.Length;
 
-                if (hasIndex)
+                if (HasSeparateIndexColumn)
                 {
                     reader.BaseStream.Position = stringTableEnd;
 
@@ -83,7 +84,7 @@ namespace DBCViewer
                 {
                     byte[] recordBytes = reader.ReadBytes(RecordSize);
 
-                    if (hasIndex)
+                    if (HasSeparateIndexColumn)
                     {
                         byte[] newRecordBytes = new byte[RecordSize + 4];
 
@@ -110,25 +111,30 @@ namespace DBCViewer
                 }
 
                 // Copy index table
-                long copyTablePos = stringTableEnd + (hasIndex ? 4 * RecordsCount : 0);
+                long copyTablePos = stringTableEnd + (HasSeparateIndexColumn ? 4 * RecordsCount : 0);
 
                 if (copyTablePos != reader.BaseStream.Length && CopyTableSize != 0)
                 {
                     reader.BaseStream.Position = copyTablePos;
 
-                    while (reader.BaseStream.Position != reader.BaseStream.Length)
+                    while (reader.BaseStream.Position < reader.BaseStream.Length)
                     {
-                        int id = reader.ReadInt32();
-                        int idcopy = reader.ReadInt32();
+                        try
+                        {
+                            int id = reader.ReadInt32();
+                            int idcopy = reader.ReadInt32();
 
-                        RecordsCount++;
+                            byte[] copyRow = Lookup[idcopy];
+                            byte[] newRow = new byte[copyRow.Length];
+                            Array.Copy(copyRow, newRow, newRow.Length);
+                            Array.Copy(BitConverter.GetBytes(id), newRow, 4);
 
-                        byte[] copyRow = Lookup[idcopy];
-                        byte[] newRow = new byte[copyRow.Length];
-                        Array.Copy(copyRow, newRow, newRow.Length);
-                        Array.Copy(BitConverter.GetBytes(id), newRow, 4);
-
-                        Lookup.Add(id, newRow);
+                            Lookup.Add(id, newRow);
+                            RecordsCount++;
+                        }
+                        catch (KeyNotFoundException)
+                        {
+                        }
                     }
                 }
             }

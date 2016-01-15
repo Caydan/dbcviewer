@@ -162,6 +162,9 @@ namespace DBCViewer
 
         private void CreateColumns()
         {
+            if ((m_dbreader is DB4Reader && ((DB4Reader)m_dbreader).HasSeparateIndexColumn) || m_dbreader is DB4SparseReader)
+                m_dataTable.Columns.Add("ID", typeof(uint));
+
             foreach (XmlElement field in m_fields)
             {
                 var colName = field.Attributes["name"].Value;

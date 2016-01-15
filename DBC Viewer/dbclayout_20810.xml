@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--$Id: dbclayout.xml Jan  7 2016 19:26:33 $-->
+<!--$Id: dbclayout.xml Jan 15 2016 23:41:01 $-->
 <DBFilesClient>
   <Achievement build="20810">
     <field type="int" name="field_0" />
@@ -25,7 +25,6 @@
     <field type="byte" name="field_3" />
   </Achievement_Category>
   <AdventureJournal build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="string" name="field_2" />
     <field type="string" name="field_3" />
@@ -69,7 +68,6 @@
     <field type="byte" name="field_14" />
   </AdventureMapPOI>
   <AnimKit build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -83,26 +81,21 @@
     <field type="int" name="field_5" />
   </AnimKitBoneSet>
   <AnimKitBoneSetAlias build="20810">
-    <field type="int" name="field_0" />
     <field type="byte" name="field_1" />
     <field type="byte" name="field_2" />
   </AnimKitBoneSetAlias>
   <AnimKitConfig build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
   </AnimKitConfig>
   <AnimKitConfigBoneSet build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
   </AnimKitConfigBoneSet>
   <AnimKitPriority build="20810">
-    <field type="int" name="field_0" />
     <field type="byte" name="field_1" />
   </AnimKitPriority>
   <AnimKitSegment build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -121,14 +114,12 @@
     <field type="byte" name="field_16" />
   </AnimKitSegment>
   <AnimReplacement build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
     <field type="short" name="field_4" />
   </AnimReplacement>
   <AnimReplacementSet build="20810">
-    <field type="int" name="field_0" />
     <field type="byte" name="field_1" />
   </AnimReplacementSet>
   <AnimationData build="20810">
@@ -140,12 +131,10 @@
     <field type="int" name="field_5" />
   </AnimationData>
   <AreaGroupMember build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
   </AreaGroupMember>
   <AreaPOI build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="string" name="field_3" />
@@ -161,7 +150,6 @@
     <field type="byte" name="field_13" />
   </AreaPOI>
   <AreaPOIState build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
@@ -221,23 +209,19 @@
     <field type="int" name="field_1" />
   </AreaTriggerActionSet>
   <AreaTriggerBox build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
   </AreaTriggerBox>
   <AreaTriggerCylinder build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
   </AreaTriggerCylinder>
   <AreaTriggerSphere build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
   </AreaTriggerSphere>
   <ArmorLocation build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -245,7 +229,6 @@
     <field type="float" name="field_5" />
   </ArmorLocation>
   <Artifact build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -288,7 +271,6 @@
     <field type="byte" name="field_6" />
   </ArtifactPower>
   <ArtifactPowerLink build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
   </ArtifactPowerLink>
@@ -301,7 +283,6 @@
     <field type="byte" name="field_5" />
   </ArtifactPowerRank>
   <ArtifactQuestXP build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -314,21 +295,18 @@
     <field type="short" name="field_10" />
   </ArtifactQuestXP>
   <ArtifactUnlock build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
     <field type="byte" name="field_4" />
   </ArtifactUnlock>
   <AuctionHouse build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
     <field type="byte" name="field_4" />
   </AuctionHouse>
   <BankBagSlotPrices build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
   </BankBagSlotPrices>
   <BannedAddOns build="20810">
@@ -393,7 +371,6 @@
     <field type="byte" name="field_5" />
   </BattlePetAbilityTurn>
   <BattlePetBreedQuality build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="byte" name="field_2" />
   </BattlePetBreedQuality>
@@ -404,7 +381,6 @@
     <field type="byte" name="field_3" />
   </BattlePetBreedState>
   <BattlePetEffectProperties build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="string" name="field_2" />
     <field type="string" name="field_3" />
@@ -420,7 +396,6 @@
     <field type="byte" name="field_13" />
   </BattlePetEffectProperties>
   <BattlePetNPCTeamMember build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </BattlePetNPCTeamMember>
   <BattlePetSpecies build="20810">
@@ -448,13 +423,11 @@
     <field type="byte" name="field_4" />
   </BattlePetSpeciesXAbility>
   <BattlePetState build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
   </BattlePetState>
   <BattlePetVisual build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -497,7 +470,6 @@
     <field type="int" name="field_30" />
   </BattlemasterList>
   <BroadcastText build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="string" name="field_2" />
     <field type="short" name="field_3" />
@@ -512,11 +484,9 @@
     <field type="byte" name="field_12" />
   </BroadcastText>
   <CameraEffect build="20810">
-    <field type="int" name="field_0" />
     <field type="byte" name="field_1" />
   </CameraEffect>
   <CameraEffectEntry build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -553,7 +523,6 @@
     <field type="int" name="field_15" />
   </CameraMode>
   <CameraShakes build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -565,7 +534,6 @@
     <field type="byte" name="field_9" />
   </CameraShakes>
   <CastableRaidBuffs build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
   </CastableRaidBuffs>
@@ -578,7 +546,6 @@
     <field type="byte" name="field_5" />
   </Cfg_Categories>
   <Cfg_Configs build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
@@ -586,7 +553,6 @@
     <field type="byte" name="field_5" />
   </Cfg_Configs>
   <Cfg_Regions build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="byte" name="field_2" />
   </Cfg_Regions>
@@ -614,7 +580,6 @@
     <field type="int" name="field_7" />
   </CharComponentTextureSections>
   <CharHairGeosets build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="byte" name="field_3" />
@@ -648,7 +613,6 @@
     <field type="byte" name="field_7" />
   </CharShipment>
   <CharShipmentContainer build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="string" name="field_2" />
     <field type="short" name="field_3" />
@@ -666,7 +630,6 @@
     <field type="byte" name="field_15" />
   </CharShipmentContainer>
   <CharStartOutfit build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -707,7 +670,6 @@
     <field type="int" name="field_5" />
   </CharTitles>
   <CharacterFaceBoneSet build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
@@ -730,7 +692,6 @@
     <field type="int" name="field_3" />
   </CharacterLoadout>
   <CharacterLoadoutItem build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="short" name="field_2" />
   </CharacterLoadoutItem>
@@ -747,7 +708,6 @@
     <field type="byte" name="field_2" />
   </ChatProfanity>
   <ChrClassRaceSex build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
@@ -755,19 +715,16 @@
     <field type="byte" name="field_5" />
   </ChrClassRaceSex>
   <ChrClassTitle build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="string" name="field_2" />
     <field type="byte" name="field_3" />
   </ChrClassTitle>
   <ChrClassUIDisplay build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
   </ChrClassUIDisplay>
   <ChrClassVillain build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
@@ -794,7 +751,6 @@
     <field type="int" name="field_18" />
   </ChrClasses>
   <ChrClassesXPowerTypes build="20810">
-    <field type="int" name="field_0" />
     <field type="byte" name="field_1" />
     <field type="byte" name="field_2" />
   </ChrClassesXPowerTypes>
@@ -863,7 +819,6 @@
     <field type="byte" name="field_2" />
   </ChrUpgradeBucket>
   <ChrUpgradeBucketSpell build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="short" name="field_2" />
   </ChrUpgradeBucketSpell>
@@ -874,7 +829,6 @@
     <field type="byte" name="field_3" />
   </ChrUpgradeTier>
   <CinematicCamera build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -883,7 +837,6 @@
     <field type="short" name="field_6" />
   </CinematicCamera>
   <CinematicSequences build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -895,7 +848,6 @@
     <field type="short" name="field_9" />
   </CinematicSequences>
   <CombatCondition build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -915,13 +867,11 @@
     <field type="byte" name="field_17" />
   </CombatCondition>
   <ComponentTextureFileData build="20810">
-    <field type="int" name="field_0" />
     <field type="byte" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
   </ComponentTextureFileData>
   <ConversationLine build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="short" name="field_3" />
@@ -968,7 +918,6 @@
     <field type="byte" name="field_10" />
   </CreatureDifficulty>
   <CreatureDispXUiCamera build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="short" name="field_2" />
   </CreatureDispXUiCamera>
@@ -1018,7 +967,6 @@
     <field type="byte" name="field_17" />
   </CreatureDisplayInfoCond>
   <CreatureDisplayInfoExtra build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -1045,7 +993,6 @@
     <field type="byte" name="field_24" />
   </CreatureDisplayInfoExtra>
   <CreatureDisplayInfoTrn build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="float" name="field_3" />
@@ -1066,7 +1013,6 @@
     <field type="string" name="field_11" />
   </CreatureFamily>
   <CreatureImmunities build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="byte" name="field_3" />
@@ -1139,7 +1085,6 @@
     <field type="float" name="field_35" />
   </CreatureModelData>
   <CreatureMovementInfo build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
   </CreatureMovementInfo>
   <CreatureSoundData build="20810">
@@ -1190,12 +1135,10 @@
     <field type="int" name="field_44" />
   </CreatureSoundData>
   <CreatureType build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="byte" name="field_2" />
   </CreatureType>
   <Criteria build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -1209,7 +1152,6 @@
     <field type="byte" name="field_11" />
   </Criteria>
   <CriteriaTree build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="string" name="field_2" />
     <field type="short" name="field_3" />
@@ -1224,7 +1166,6 @@
     <field type="int" name="field_2" />
   </CriteriaTreeXEffect>
   <CurrencyCategory build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
@@ -1244,19 +1185,16 @@
     <field type="byte" name="field_11" />
   </CurrencyTypes>
   <Curve build="20810">
-    <field type="int" name="field_0" />
     <field type="byte" name="field_1" />
     <field type="byte" name="field_2" />
   </Curve>
   <CurvePoint build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="short" name="field_3" />
     <field type="byte" name="field_4" />
   </CurvePoint>
   <DeathThudLookups build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
@@ -1279,13 +1217,11 @@
     <field type="string" name="field_1" />
   </DeclinedWord>
   <DeclinedWordCases build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="string" name="field_2" />
     <field type="byte" name="field_3" />
   </DeclinedWordCases>
   <DestructibleModelData build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -1310,12 +1246,10 @@
     <field type="byte" name="field_22" />
   </DestructibleModelData>
   <DeviceBlacklist build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
   </DeviceBlacklist>
   <DeviceDefaultSettings build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
@@ -1337,7 +1271,6 @@
     <field type="int" name="field_13" />
   </Difficulty>
   <DissolveEffect build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -1364,7 +1297,6 @@
     <field type="byte" name="field_24" />
   </DissolveEffect>
   <DriverBlacklist build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="short" name="field_3" />
@@ -1404,7 +1336,6 @@
     <field type="short" name="field_5" />
   </DungeonMapChunk>
   <DurabilityCosts build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -1436,7 +1367,6 @@
     <field type="short" name="field_29" />
   </DurabilityCosts>
   <DurabilityQuality build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
   </DurabilityQuality>
   <Emotes build="20810">
@@ -1471,11 +1401,9 @@
     <field type="int" name="field_18" />
   </EmotesText>
   <EmotesTextData build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </EmotesTextData>
   <EmotesTextSound build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
@@ -1483,7 +1411,6 @@
     <field type="byte" name="field_5" />
   </EmotesTextSound>
   <EnvironmentalDamage build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="byte" name="field_2" />
   </EnvironmentalDamage>
@@ -1554,14 +1481,12 @@
     <field type="string" name="field_1" />
   </FootprintTextures>
   <FootstepTerrainLookup build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
     <field type="byte" name="field_4" />
   </FootstepTerrainLookup>
   <FriendshipRepReaction build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
@@ -1573,21 +1498,17 @@
     <field type="short" name="field_3" />
   </FriendshipReputation>
   <GMSurveyAnswers build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
   </GMSurveyAnswers>
   <GMSurveyCurrentSurvey build="20810">
-    <field type="int" name="field_0" />
     <field type="byte" name="field_1" />
   </GMSurveyCurrentSurvey>
   <GMSurveyQuestions build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </GMSurveyQuestions>
   <GMSurveySurveys build="20810">
-    <field type="int" name="field_0" />
     <field type="byte" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
@@ -1605,7 +1526,6 @@
     <field type="byte" name="field_15" />
   </GMSurveySurveys>
   <GameObjectArtKit build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="string" name="field_2" />
     <field type="string" name="field_3" />
@@ -1615,14 +1535,12 @@
     <field type="string" name="field_7" />
   </GameObjectArtKit>
   <GameObjectDiffAnimMap build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
     <field type="byte" name="field_4" />
   </GameObjectDiffAnimMap>
   <GameObjectDisplayInfo build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -1671,7 +1589,6 @@
     <field type="byte" name="field_23" />
   </GameObjects>
   <GameTables build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
@@ -1693,7 +1610,6 @@
     <field type="byte" name="field_7" />
   </GarrAbility>
   <GarrAbilityCategory build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </GarrAbilityCategory>
   <GarrAbilityEffect build="20810">
@@ -1711,7 +1627,6 @@
     <field type="byte" name="field_11" />
   </GarrAbilityEffect>
   <GarrBuilding build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="string" name="field_3" />
@@ -1738,7 +1653,6 @@
     <field type="byte" name="field_24" />
   </GarrBuilding>
   <GarrBuildingDoodadSet build="20810">
-    <field type="int" name="field_0" />
     <field type="byte" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
@@ -1771,19 +1685,16 @@
     <field type="byte" name="field_6" />
   </GarrEncounter>
   <GarrEncounterXMechanic build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="byte" name="field_2" />
   </GarrEncounterXMechanic>
   <GarrFollItemSetMember build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
     <field type="byte" name="field_4" />
   </GarrFollItemSetMember>
   <GarrFollower build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="string" name="field_3" />
@@ -1810,21 +1721,18 @@
     <field type="byte" name="field_24" />
   </GarrFollower>
   <GarrFollowerLevelXP build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
     <field type="byte" name="field_4" />
   </GarrFollowerLevelXP>
   <GarrFollowerQuality build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
     <field type="byte" name="field_4" />
   </GarrFollowerQuality>
   <GarrFollowerType build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
@@ -1832,7 +1740,6 @@
     <field type="byte" name="field_5" />
   </GarrFollowerType>
   <GarrFollowerXAbility build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
@@ -1891,24 +1798,20 @@
     <field type="byte" name="field_10" />
   </GarrMissionReward>
   <GarrMissionTexture build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="byte" name="field_3" />
   </GarrMissionTexture>
   <GarrMissionType build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
   </GarrMissionType>
   <GarrMissionXEncounter build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
   </GarrMissionXEncounter>
   <GarrMssnBonusAbility build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="int" name="field_2" />
     <field type="short" name="field_3" />
@@ -1916,7 +1819,6 @@
     <field type="byte" name="field_5" />
   </GarrMssnBonusAbility>
   <GarrPlot build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -1927,22 +1829,18 @@
     <field type="byte" name="field_8" />
   </GarrPlot>
   <GarrPlotBuilding build="20810">
-    <field type="int" name="field_0" />
     <field type="byte" name="field_1" />
     <field type="byte" name="field_2" />
   </GarrPlotBuilding>
   <GarrPlotInstance build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="byte" name="field_2" />
   </GarrPlotInstance>
   <GarrPlotUICategory build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="byte" name="field_2" />
   </GarrPlotUICategory>
   <GarrSiteLevel build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="short" name="field_3" />
@@ -1955,7 +1853,6 @@
     <field type="byte" name="field_10" />
   </GarrSiteLevel>
   <GarrSiteLevelPlotInst build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="short" name="field_3" />
@@ -1963,7 +1860,6 @@
     <field type="byte" name="field_5" />
   </GarrSiteLevelPlotInst>
   <GarrSpecialization build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -1974,18 +1870,15 @@
     <field type="byte" name="field_8" />
   </GarrSpecialization>
   <GarrType build="20810">
-    <field type="int" name="field_0" />
     <field type="byte" name="field_1" />
   </GarrType>
   <GarrUiAnimClassInfo build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
     <field type="byte" name="field_4" />
   </GarrUiAnimClassInfo>
   <GarrUiAnimRaceInfo build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -2019,12 +1912,10 @@
     <field type="int" name="field_7" />
   </GlueScreenEmote>
   <GlyphBindableSpell build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="short" name="field_2" />
   </GlyphBindableSpell>
   <GlyphExclusiveCategory build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </GlyphExclusiveCategory>
   <GlyphProperties build="20810">
@@ -2035,24 +1926,20 @@
     <field type="int" name="field_4" />
   </GlyphProperties>
   <GlyphRequiredSpec build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
   </GlyphRequiredSpec>
   <GlyphSlot build="20810">
-    <field type="int" name="field_0" />
     <field type="byte" name="field_1" />
     <field type="byte" name="field_2" />
   </GlyphSlot>
   <GroundEffectDoodad build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
     <field type="byte" name="field_4" />
   </GroundEffectDoodad>
   <GroundEffectTexture build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -2065,7 +1952,6 @@
     <field type="byte" name="field_10" />
   </GroundEffectTexture>
   <GroupFinderActivity build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="string" name="field_2" />
     <field type="short" name="field_3" />
@@ -2082,36 +1968,30 @@
     <field type="byte" name="field_14" />
   </GroupFinderActivity>
   <GroupFinderActivityGrp build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="byte" name="field_2" />
   </GroupFinderActivityGrp>
   <GroupFinderCategory build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
   </GroupFinderCategory>
   <GuildColorBackground build="20810">
-    <field type="int" name="field_0" />
     <field type="byte" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
   </GuildColorBackground>
   <GuildColorBorder build="20810">
-    <field type="int" name="field_0" />
     <field type="byte" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
   </GuildColorBorder>
   <GuildColorEmblem build="20810">
-    <field type="int" name="field_0" />
     <field type="byte" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
   </GuildColorEmblem>
   <GuildPerkSpells build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="byte" name="field_2" />
   </GuildPerkSpells>
@@ -2136,7 +2016,6 @@
     <field type="float" name="field_3" />
   </HelmetAnimScaling>
   <HelmetGeosetVisData build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -2148,7 +2027,6 @@
     <field type="int" name="field_9" />
   </HelmetGeosetVisData>
   <HighlightColor build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -2156,15 +2034,12 @@
     <field type="byte" name="field_5" />
   </HighlightColor>
   <HolidayDescriptions build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </HolidayDescriptions>
   <HolidayNames build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </HolidayNames>
   <Holidays build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -2211,22 +2086,18 @@
     <field type="byte" name="field_44" />
   </Holidays>
   <ImportPriceArmor build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
     <field type="float" name="field_4" />
   </ImportPriceArmor>
   <ImportPriceQuality build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
   </ImportPriceQuality>
   <ImportPriceShield build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
   </ImportPriceShield>
   <ImportPriceWeapon build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
   </ImportPriceWeapon>
   <InvasionClientData build="20810">
@@ -2240,7 +2111,6 @@
     <field type="float" name="field_7" />
   </InvasionClientData>
   <Item build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
@@ -2251,18 +2121,15 @@
     <field type="byte" name="field_8" />
   </Item>
   <ItemAppearance build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="byte" name="field_3" />
   </ItemAppearance>
   <ItemAppearanceXUiCamera build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="byte" name="field_2" />
   </ItemAppearanceXUiCamera>
   <ItemArmorQuality build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -2273,7 +2140,6 @@
     <field type="short" name="field_8" />
   </ItemArmorQuality>
   <ItemArmorShield build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -2284,7 +2150,6 @@
     <field type="short" name="field_8" />
   </ItemArmorShield>
   <ItemArmorTotal build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -2292,7 +2157,6 @@
     <field type="short" name="field_5" />
   </ItemArmorTotal>
   <ItemBagFamily build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </ItemBagFamily>
   <ItemBonus build="20810">
@@ -2308,30 +2172,25 @@
     <field type="short" name="field_1" />
   </ItemBonusListLevelDelta>
   <ItemBonusTreeNode build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
     <field type="byte" name="field_4" />
   </ItemBonusTreeNode>
   <ItemChildEquipment build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="byte" name="field_3" />
   </ItemChildEquipment>
   <ItemClass build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="string" name="field_2" />
     <field type="byte" name="field_3" />
   </ItemClass>
   <ItemCurrencyCost build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
   </ItemCurrencyCost>
   <ItemDamageAmmo build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -2342,7 +2201,6 @@
     <field type="short" name="field_8" />
   </ItemDamageAmmo>
   <ItemDamageOneHand build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -2353,7 +2211,6 @@
     <field type="short" name="field_8" />
   </ItemDamageOneHand>
   <ItemDamageOneHandCaster build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -2364,7 +2221,6 @@
     <field type="short" name="field_8" />
   </ItemDamageOneHandCaster>
   <ItemDamageTwoHand build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -2375,7 +2231,6 @@
     <field type="short" name="field_8" />
   </ItemDamageTwoHand>
   <ItemDamageTwoHandCaster build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -2386,7 +2241,6 @@
     <field type="short" name="field_8" />
   </ItemDamageTwoHandCaster>
   <ItemDisenchantLoot build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -2395,7 +2249,6 @@
     <field type="byte" name="field_6" />
   </ItemDisenchantLoot>
   <ItemDisplayInfo build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="string" name="field_2" />
     <field type="int" name="field_3" />
@@ -2417,18 +2270,15 @@
     <field type="byte" name="field_19" />
   </ItemDisplayInfo>
   <ItemDisplayInfoMaterialRes build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="byte" name="field_3" />
   </ItemDisplayInfoMaterialRes>
   <ItemDisplayXUiCamera build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="byte" name="field_2" />
   </ItemDisplayXUiCamera>
   <ItemEffect build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -2440,7 +2290,6 @@
     <field type="byte" name="field_9" />
   </ItemEffect>
   <ItemExtendedCost build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -2470,14 +2319,12 @@
     <field type="byte" name="field_27" />
   </ItemExtendedCost>
   <ItemGroupSounds build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
     <field type="short" name="field_4" />
   </ItemGroupSounds>
   <ItemLimitCategory build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
@@ -2490,7 +2337,6 @@
     <field type="byte" name="field_4" />
   </ItemModifiedAppearance>
   <ItemModifiedAppearanceExtra build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="byte" name="field_3" />
@@ -2498,22 +2344,18 @@
     <field type="byte" name="field_5" />
   </ItemModifiedAppearanceExtra>
   <ItemNameDescription build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="int" name="field_2" />
   </ItemNameDescription>
   <ItemPetFood build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </ItemPetFood>
   <ItemPriceBase build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="short" name="field_3" />
   </ItemPriceBase>
   <ItemRandomProperties build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -2522,7 +2364,6 @@
     <field type="short" name="field_6" />
   </ItemRandomProperties>
   <ItemRandomSuffix build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="string" name="field_2" />
     <field type="short" name="field_3" />
@@ -2537,14 +2378,12 @@
     <field type="short" name="field_12" />
   </ItemRandomSuffix>
   <ItemRangedDisplayInfo build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
     <field type="int" name="field_4" />
   </ItemRangedDisplayInfo>
   <ItemSearchName build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -2574,14 +2413,12 @@
     <field type="int" name="field_20" />
   </ItemSet>
   <ItemSetSpell build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
     <field type="byte" name="field_4" />
   </ItemSetSpell>
   <ItemSparse build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -2686,7 +2523,6 @@
     <field type="byte" name="field_102" />
   </ItemSparse>
   <ItemSpec build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
@@ -2695,12 +2531,10 @@
     <field type="byte" name="field_6" />
   </ItemSpec>
   <ItemSpecOverride build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="short" name="field_2" />
   </ItemSpecOverride>
   <ItemSubClass build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="string" name="field_2" />
     <field type="short" name="field_3" />
@@ -2713,17 +2547,14 @@
     <field type="byte" name="field_10" />
   </ItemSubClass>
   <ItemSubClassMask build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="string" name="field_2" />
     <field type="byte" name="field_3" />
   </ItemSubClassMask>
   <ItemToBattlePetSpecies build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
   </ItemToBattlePetSpecies>
   <ItemToMountSpell build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
   </ItemToMountSpell>
   <ItemUpgrade build="20810">
@@ -2735,7 +2566,6 @@
     <field type="byte" name="field_5" />
   </ItemUpgrade>
   <ItemVisualEffects build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </ItemVisualEffects>
   <ItemVisuals build="20810">
@@ -2747,7 +2577,6 @@
     <field type="int" name="field_5" />
   </ItemVisuals>
   <ItemXBonusTree build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="short" name="field_2" />
   </ItemXBonusTree>
@@ -2783,7 +2612,6 @@
     <field type="int" name="field_5" />
   </JournalEncounterItem>
   <JournalEncounterSection build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="string" name="field_2" />
     <field type="int" name="field_3" />
@@ -2800,12 +2628,10 @@
     <field type="byte" name="field_14" />
   </JournalEncounterSection>
   <JournalEncounterXDifficulty build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="byte" name="field_2" />
   </JournalEncounterXDifficulty>
   <JournalInstance build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -2818,12 +2644,10 @@
     <field type="byte" name="field_10" />
   </JournalInstance>
   <JournalItemXDifficulty build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="byte" name="field_2" />
   </JournalItemXDifficulty>
   <JournalSectionXDifficulty build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="byte" name="field_2" />
   </JournalSectionXDifficulty>
@@ -2832,12 +2656,10 @@
     <field type="string" name="field_1" />
   </JournalTier>
   <JournalTierXInstance build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
   </JournalTierXInstance>
   <KeyChain build="20810">
-    <field type="int" name="field_0" />
     <field type="byte" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
@@ -2872,7 +2694,6 @@
     <field type="byte" name="field_32" />
   </KeyChain>
   <LanguageWords build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="byte" name="field_2" />
   </LanguageWords>
@@ -2891,7 +2712,6 @@
     <field type="int" name="field_7" />
   </LfgDungeonExpansion>
   <LfgDungeonGroup build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
@@ -2936,7 +2756,6 @@
     <field type="int" name="field_3" />
   </LfgDungeonsGroupingMap>
   <LfgRoleRequirement build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
@@ -3004,7 +2823,6 @@
     <field type="byte" name="field_12" />
   </LightParams>
   <LightSkybox build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="byte" name="field_2" />
   </LightSkybox>
@@ -3014,7 +2832,6 @@
     <field type="int" name="field_2" />
   </LiquidMaterial>
   <LiquidObject build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="short" name="field_3" />
@@ -3101,19 +2918,16 @@
     <field type="byte" name="field_23" />
   </LoadingScreenTaxiSplines>
   <LoadingScreens build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
   </LoadingScreens>
   <Locale build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
     <field type="byte" name="field_4" />
   </Locale>
   <Location build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -3164,7 +2978,6 @@
     <field type="string" name="field_4" />
   </LockType>
   <LookAtController build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -3185,7 +2998,6 @@
     <field type="byte" name="field_18" />
   </LookAtController>
   <MailTemplate build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </MailTemplate>
   <ManifestInterfaceActionIcon build="20810">
@@ -3200,7 +3012,6 @@
     <field type="int" name="field_0" />
   </ManifestInterfaceItemIcon>
   <ManifestInterfaceTOCData build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </ManifestInterfaceTOCData>
   <ManifestMP3 build="20810">
@@ -3231,7 +3042,6 @@
     <field type="int" name="field_21" />
   </Map>
   <MapChallengeMode build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="byte" name="field_2" />
   </MapChallengeMode>
@@ -3246,7 +3056,6 @@
     <field type="int" name="field_7" />
   </MapDifficulty>
   <MarketingPromotionsXLocale build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -3256,7 +3065,6 @@
     <field type="byte" name="field_7" />
   </MarketingPromotionsXLocale>
   <Material build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -3269,12 +3077,10 @@
     <field type="int" name="field_3" />
   </MinorTalent>
   <ModelFileData build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="byte" name="field_2" />
   </ModelFileData>
   <ModelManifest build="20810">
-    <field type="int" name="field_0" />
     <field type="long" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -3283,12 +3089,10 @@
     <field type="byte" name="field_6" />
   </ModelManifest>
   <ModelNameToManifest build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="int" name="field_2" />
   </ModelNameToManifest>
   <ModifierTree build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="short" name="field_3" />
@@ -3323,20 +3127,17 @@
     <field type="int" name="field_0" />
   </MountType>
   <MountTypeXCapability build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
   </MountTypeXCapability>
   <Movie build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="byte" name="field_3" />
     <field type="byte" name="field_4" />
   </Movie>
   <MovieFileData build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
   </MovieFileData>
   <MovieVariation build="20810">
@@ -3346,34 +3147,28 @@
     <field type="int" name="field_3" />
   </MovieVariation>
   <NPCSounds build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
     <field type="short" name="field_4" />
   </NPCSounds>
   <NameGen build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
   </NameGen>
   <NamesProfanity build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="byte" name="field_2" />
   </NamesProfanity>
   <NamesReserved build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </NamesReserved>
   <NamesReservedLocale build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="byte" name="field_2" />
   </NamesReservedLocale>
   <ObjectEffect build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -3387,11 +3182,9 @@
     <field type="byte" name="field_11" />
   </ObjectEffect>
   <ObjectEffectGroup build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </ObjectEffectGroup>
   <ObjectEffectModifier build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -3401,17 +3194,14 @@
     <field type="byte" name="field_7" />
   </ObjectEffectModifier>
   <ObjectEffectPackage build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </ObjectEffectPackage>
   <ObjectEffectPackageElem build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
   </ObjectEffectPackageElem>
   <OutlineEffect build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -3420,7 +3210,6 @@
     <field type="byte" name="field_6" />
   </OutlineEffect>
   <OverrideSpellData build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -3435,17 +3224,14 @@
     <field type="byte" name="field_12" />
   </OverrideSpellData>
   <PageTextMaterial build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </PageTextMaterial>
   <PaperDollItemFrame build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="string" name="field_2" />
     <field type="byte" name="field_3" />
   </PaperDollItemFrame>
   <ParticleColor build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -3490,7 +3276,6 @@
     <field type="int" name="field_1" />
   </Phase>
   <PhaseShiftZoneSounds build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -3506,12 +3291,10 @@
     <field type="byte" name="field_13" />
   </PhaseShiftZoneSounds>
   <PhaseXPhaseGroup build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
   </PhaseXPhaseGroup>
   <PlayerCondition build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -3659,14 +3442,12 @@
     <field type="byte" name="field_145" />
   </PlayerCondition>
   <Positioner build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
     <field type="byte" name="field_4" />
   </Positioner>
   <PositionerState build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -3676,7 +3457,6 @@
     <field type="byte" name="field_7" />
   </PositionerState>
   <PositionerStateEntry build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="byte" name="field_3" />
@@ -3690,7 +3470,6 @@
     <field type="byte" name="field_11" />
   </PositionerStateEntry>
   <PowerDisplay build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
@@ -3698,7 +3477,6 @@
     <field type="byte" name="field_5" />
   </PowerDisplay>
   <PowerType build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="string" name="field_2" />
     <field type="float" name="field_3" />
@@ -3713,7 +3491,6 @@
     <field type="byte" name="field_12" />
   </PowerType>
   <PrestigeLevelInfo build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
@@ -3726,12 +3503,10 @@
     <field type="int" name="field_4" />
   </PvpDifficulty>
   <PvpItem build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="byte" name="field_2" />
   </PvpItem>
   <PvpReward build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -3749,13 +3524,11 @@
     <field type="string" name="field_9" />
   </PvpTalent>
   <PvpTalentUnlock build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
   </PvpTalentUnlock>
   <QuestFactionReward build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -3777,21 +3550,17 @@
     <field type="int" name="field_6" />
   </QuestFeedbackEffect>
   <QuestInfo build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </QuestInfo>
   <QuestLine build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </QuestLine>
   <QuestLineXQuest build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
   </QuestLineXQuest>
   <QuestMoneyReward build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -3804,7 +3573,6 @@
     <field type="int" name="field_10" />
   </QuestMoneyReward>
   <QuestObjective build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="string" name="field_3" />
@@ -3815,7 +3583,6 @@
     <field type="byte" name="field_8" />
   </QuestObjective>
   <QuestPOIBlob build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
@@ -3827,7 +3594,6 @@
     <field type="short" name="field_3" />
   </QuestPOIPoint>
   <QuestPOIPointCliTask build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -3836,18 +3602,15 @@
     <field type="byte" name="field_6" />
   </QuestPOIPointCliTask>
   <QuestPackageItem build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
     <field type="byte" name="field_4" />
   </QuestPackageItem>
   <QuestSort build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </QuestSort>
   <QuestV2 build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
   </QuestV2>
   <QuestV2CliTask build="20810">
@@ -3877,7 +3640,6 @@
     <field type="byte" name="field_23" />
   </QuestV2CliTask>
   <QuestXP build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -3890,12 +3652,10 @@
     <field type="short" name="field_10" />
   </QuestXP>
   <RacialMounts build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="byte" name="field_2" />
   </RacialMounts>
   <RandPropPoints build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -3913,7 +3673,6 @@
     <field type="short" name="field_15" />
   </RandPropPoints>
   <ResearchBranch build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="string" name="field_2" />
     <field type="int" name="field_3" />
@@ -3937,61 +3696,51 @@
     <field type="byte" name="field_8" />
   </ResearchProject>
   <ResearchSite build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="string" name="field_2" />
     <field type="short" name="field_3" />
     <field type="byte" name="field_4" />
   </ResearchSite>
   <Resistances build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
   </Resistances>
   <RewardPack build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="float" name="field_3" />
     <field type="byte" name="field_4" />
   </RewardPack>
   <RewardPackXCurrencyType build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
   </RewardPackXCurrencyType>
   <RewardPackXItem build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
   </RewardPackXItem>
   <RulesetItemUpgrade build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="short" name="field_2" />
   </RulesetItemUpgrade>
   <ScalingStatDistribution build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
   </ScalingStatDistribution>
   <Scenario build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
   </Scenario>
   <ScenarioEventEntry build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="byte" name="field_2" />
   </ScenarioEventEntry>
   <ScenarioStep build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="string" name="field_2" />
     <field type="short" name="field_3" />
@@ -4003,14 +3752,12 @@
     <field type="byte" name="field_9" />
   </ScenarioStep>
   <SceneScript build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="string" name="field_2" />
     <field type="short" name="field_3" />
     <field type="short" name="field_4" />
   </SceneScript>
   <SceneScriptPackage build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </SceneScriptPackage>
   <SceneScriptPackageMember build="20810">
@@ -4047,7 +3794,6 @@
     <field type="int" name="field_4" />
   </ScheduledWorldStateGroup>
   <ScreenEffect build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -4064,19 +3810,15 @@
     <field type="byte" name="field_14" />
   </ScreenEffect>
   <ScreenLocation build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </ScreenLocation>
   <SeamlessSite build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
   </SeamlessSite>
   <ServerMessages build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </ServerMessages>
   <ShadowyEffect build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="float" name="field_3" />
@@ -4089,7 +3831,6 @@
     <field type="byte" name="field_10" />
   </ShadowyEffect>
   <SkillLine build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="string" name="field_2" />
     <field type="string" name="field_3" />
@@ -4100,7 +3841,6 @@
     <field type="byte" name="field_8" />
   </SkillLine>
   <SkillLineAbility build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -4115,7 +3855,6 @@
     <field type="byte" name="field_12" />
   </SkillLineAbility>
   <SkillRaceClassInfo build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -4125,13 +3864,11 @@
     <field type="byte" name="field_7" />
   </SkillRaceClassInfo>
   <SoundAmbience build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
   </SoundAmbience>
   <SoundAmbienceFlavor build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -4151,7 +3888,6 @@
     <field type="byte" name="field_11" />
   </SoundBus>
   <SoundEmitterPillPoints build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -4176,11 +3912,9 @@
     <field type="byte" name="field_15" />
   </SoundEmitters>
   <SoundFilter build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </SoundFilter>
   <SoundFilterElem build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -4213,7 +3947,6 @@
     <field type="byte" name="field_16" />
   </SoundKit>
   <SoundKitAdvanced build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -4243,31 +3976,26 @@
     <field type="byte" name="field_27" />
   </SoundKitAdvanced>
   <SoundKitChild build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
   </SoundKitChild>
   <SoundKitEntry build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="float" name="field_2" />
     <field type="short" name="field_3" />
     <field type="byte" name="field_4" />
   </SoundKitEntry>
   <SoundKitFallback build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
   </SoundKitFallback>
   <SoundOverride build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
     <field type="byte" name="field_4" />
   </SoundOverride>
   <SoundProviderPreferences build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -4293,14 +4021,12 @@
     <field type="byte" name="field_23" />
   </SoundProviderPreferences>
   <SourceInfo build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="string" name="field_2" />
     <field type="byte" name="field_3" />
     <field type="byte" name="field_4" />
   </SourceInfo>
   <SpamMessages build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </SpamMessages>
   <SpecializationSpells build="20810">
@@ -4321,12 +4047,10 @@
     <field type="short" name="field_6" />
   </Spell>
   <SpellActionBarPref build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="short" name="field_2" />
   </SpellActionBarPref>
   <SpellActivationOverlay build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -4340,7 +4064,6 @@
     <field type="byte" name="field_11" />
   </SpellActivationOverlay>
   <SpellAuraOptions build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -4351,7 +4074,6 @@
     <field type="byte" name="field_8" />
   </SpellAuraOptions>
   <SpellAuraRestrictions build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -4364,7 +4086,6 @@
     <field type="byte" name="field_10" />
   </SpellAuraRestrictions>
   <SpellAuraVisXChrSpec build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
   </SpellAuraVisXChrSpec>
@@ -4375,13 +4096,11 @@
     <field type="byte" name="field_3" />
   </SpellAuraVisibility>
   <SpellCastTimes build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="short" name="field_3" />
   </SpellCastTimes>
   <SpellCastingRequirements build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -4391,7 +4110,6 @@
     <field type="byte" name="field_7" />
   </SpellCastingRequirements>
   <SpellCategories build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -4403,7 +4121,6 @@
     <field type="byte" name="field_9" />
   </SpellCategories>
   <SpellCategory build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="int" name="field_2" />
     <field type="byte" name="field_3" />
@@ -4491,7 +4208,6 @@
     <field type="string" name="field_77" />
   </SpellChainEffects>
   <SpellClassOptions build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -4501,7 +4217,6 @@
     <field type="byte" name="field_7" />
   </SpellClassOptions>
   <SpellCooldowns build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -4509,18 +4224,15 @@
     <field type="byte" name="field_5" />
   </SpellCooldowns>
   <SpellDescriptionVariables build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </SpellDescriptionVariables>
   <SpellDispelType build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="string" name="field_2" />
     <field type="byte" name="field_3" />
     <field type="byte" name="field_4" />
   </SpellDispelType>
   <SpellDuration build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="short" name="field_3" />
@@ -4559,40 +4271,34 @@
     <field type="byte" name="field_30" />
   </SpellEffect>
   <SpellEffectCameraShakes build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
     <field type="short" name="field_4" />
   </SpellEffectCameraShakes>
   <SpellEffectEmission build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="short" name="field_3" />
     <field type="byte" name="field_4" />
   </SpellEffectEmission>
   <SpellEffectGroupSize build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="float" name="field_2" />
   </SpellEffectGroupSize>
   <SpellEffectScaling build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
     <field type="int" name="field_4" />
   </SpellEffectScaling>
   <SpellEquippedItems build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
     <field type="byte" name="field_4" />
   </SpellEquippedItems>
   <SpellFlyout build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="string" name="field_2" />
     <field type="string" name="field_3" />
@@ -4601,21 +4307,17 @@
     <field type="byte" name="field_6" />
   </SpellFlyout>
   <SpellFlyoutItem build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
   </SpellFlyoutItem>
   <SpellFocusObject build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </SpellFocusObject>
   <SpellIcon build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </SpellIcon>
   <SpellInterrupts build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -4655,7 +4357,6 @@
     <field type="int" name="field_27" />
   </SpellItemEnchantment>
   <SpellItemEnchantmentCondition build="20810">
-    <field type="int" name="field_0" />
     <field type="byte" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
@@ -4688,19 +4389,16 @@
     <field type="byte" name="field_30" />
   </SpellItemEnchantmentCondition>
   <SpellKeyboundOverride build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="string" name="field_2" />
     <field type="byte" name="field_3" />
   </SpellKeyboundOverride>
   <SpellLearnSpell build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
   </SpellLearnSpell>
   <SpellLevels build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -4708,11 +4406,9 @@
     <field type="byte" name="field_5" />
   </SpellLevels>
   <SpellMechanic build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </SpellMechanic>
   <SpellMisc build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -4742,7 +4438,6 @@
     <field type="byte" name="field_2" />
   </SpellMiscDifficulty>
   <SpellMissile build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -4760,7 +4455,6 @@
     <field type="byte" name="field_15" />
   </SpellMissile>
   <SpellMissileMotion build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="string" name="field_2" />
     <field type="byte" name="field_3" />
@@ -4796,26 +4490,22 @@
     <field type="byte" name="field_5" />
   </SpellProceduralEffect>
   <SpellProcsPerMinute build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="byte" name="field_2" />
   </SpellProcsPerMinute>
   <SpellProcsPerMinuteMod build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
     <field type="byte" name="field_4" />
   </SpellProcsPerMinuteMod>
   <SpellRadius build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
     <field type="float" name="field_4" />
   </SpellRadius>
   <SpellRange build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -4825,7 +4515,6 @@
     <field type="byte" name="field_7" />
   </SpellRange>
   <SpellReagents build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -4845,20 +4534,17 @@
     <field type="short" name="field_17" />
   </SpellReagents>
   <SpellReagentsCurrency build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
   </SpellReagentsCurrency>
   <SpellScaling build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
     <field type="byte" name="field_4" />
   </SpellScaling>
   <SpellShapeshift build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -4867,7 +4553,6 @@
     <field type="byte" name="field_6" />
   </SpellShapeshift>
   <SpellShapeshiftForm build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="float" name="field_2" />
     <field type="int" name="field_3" />
@@ -4890,12 +4575,10 @@
     <field type="byte" name="field_20" />
   </SpellShapeshiftForm>
   <SpellSpecialUnitEffect build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
   </SpellSpecialUnitEffect>
   <SpellTargetRestrictions build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -4906,7 +4589,6 @@
     <field type="byte" name="field_8" />
   </SpellTargetRestrictions>
   <SpellTotems build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -4946,13 +4628,11 @@
     <field type="byte" name="field_29" />
   </SpellVisual>
   <SpellVisualAnim build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
   </SpellVisualAnim>
   <SpellVisualColorEffect build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="int" name="field_2" />
     <field type="short" name="field_3" />
@@ -4963,7 +4643,6 @@
     <field type="byte" name="field_8" />
   </SpellVisualColorEffect>
   <SpellVisualEffectName build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -4985,7 +4664,6 @@
     <field type="byte" name="field_5" />
   </SpellVisualKit>
   <SpellVisualKitAreaModel build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -4994,7 +4672,6 @@
     <field type="byte" name="field_6" />
   </SpellVisualKitAreaModel>
   <SpellVisualKitEffect build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -5063,13 +4740,11 @@
     <field type="string" name="field_2" />
   </Startup_Strings>
   <Stationery build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
   </Stationery>
   <StringLookups build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </StringLookups>
   <SummonProperties build="20810">
@@ -5158,7 +4833,6 @@
     <field type="byte" name="field_10" />
   </TaxiPathNode>
   <TerrainMaterial build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="string" name="field_2" />
     <field type="byte" name="field_3" />
@@ -5172,11 +4846,9 @@
     <field type="int" name="field_5" />
   </TerrainType>
   <TerrainTypeSounds build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </TerrainTypeSounds>
   <TextureBlendSet build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -5199,7 +4871,6 @@
     <field type="byte" name="field_2" />
   </TextureFileData>
   <TotemCategory build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="int" name="field_2" />
     <field type="byte" name="field_3" />
@@ -5212,7 +4883,6 @@
     <field type="byte" name="field_4" />
   </Toy>
   <TradeSkillCategory build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -5220,11 +4890,9 @@
     <field type="byte" name="field_5" />
   </TradeSkillCategory>
   <TradeSkillItem build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
   </TradeSkillItem>
   <TransformMatrix build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -5234,7 +4902,6 @@
     <field type="float" name="field_7" />
   </TransformMatrix>
   <TransportAnimation build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="float" name="field_3" />
@@ -5243,7 +4910,6 @@
     <field type="byte" name="field_6" />
   </TransportAnimation>
   <TransportPhysics build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -5256,7 +4922,6 @@
     <field type="float" name="field_10" />
   </TransportPhysics>
   <TransportRotation build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="float" name="field_3" />
@@ -5265,28 +4930,24 @@
     <field type="float" name="field_6" />
   </TransportRotation>
   <Trophy build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
     <field type="byte" name="field_4" />
   </Trophy>
   <UiCamFbackTransmogChrRace build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
     <field type="byte" name="field_4" />
   </UiCamFbackTransmogChrRace>
   <UiCamFbackTransmogWeapon build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
     <field type="byte" name="field_4" />
   </UiCamFbackTransmogWeapon>
   <UiCamera build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -5304,7 +4965,6 @@
     <field type="byte" name="field_15" />
   </UiCamera>
   <UiCameraType build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -5327,11 +4987,9 @@
     <field type="byte" name="field_8" />
   </UiTextureAtlasMember>
   <UiTextureKit build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </UiTextureKit>
   <UnitBlood build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="string" name="field_2" />
     <field type="string" name="field_3" />
@@ -5345,13 +5003,11 @@
     <field type="byte" name="field_11" />
   </UnitBlood>
   <UnitBloodLevels build="20810">
-    <field type="int" name="field_0" />
     <field type="byte" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
   </UnitBloodLevels>
   <UnitCondition build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />
@@ -5379,7 +5035,6 @@
     <field type="byte" name="field_25" />
   </UnitCondition>
   <UnitPowerBar build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -5519,14 +5174,12 @@
     <field type="int" name="field_65" />
   </VehicleSeat>
   <VehicleUIIndSeat build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="short" name="field_3" />
     <field type="byte" name="field_4" />
   </VehicleUIIndSeat>
   <VehicleUIIndicator build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </VehicleUIIndicator>
   <VideoHardware build="20810">
@@ -5555,7 +5208,6 @@
     <field type="int" name="field_22" />
   </VideoHardware>
   <Vignette build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -5565,7 +5217,6 @@
     <field type="byte" name="field_7" />
   </Vignette>
   <VocalUISounds build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
@@ -5590,7 +5241,6 @@
     <field type="int" name="field_14" />
   </WMOAreaTable>
   <WbAccessControlList build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="short" name="field_2" />
     <field type="byte" name="field_3" />
@@ -5598,7 +5248,6 @@
     <field type="byte" name="field_5" />
   </WbAccessControlList>
   <WbCertBlacklist build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
@@ -5622,19 +5271,16 @@
     <field type="byte" name="field_21" />
   </WbCertBlacklist>
   <WbCertWhitelist build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
     <field type="byte" name="field_4" />
   </WbCertWhitelist>
   <WbPermissions build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="byte" name="field_2" />
   </WbPermissions>
   <WeaponImpactSounds build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -5684,13 +5330,11 @@
     <field type="byte" name="field_47" />
   </WeaponImpactSounds>
   <WeaponSwingSounds2 build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
   </WeaponSwingSounds2>
   <WeaponTrail build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -5712,13 +5356,11 @@
     <field type="float" name="field_19" />
   </WeaponTrail>
   <WeaponTrailModelDef build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
   </WeaponTrailModelDef>
   <WeaponTrailParam build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -5751,7 +5393,6 @@
     <field type="float" name="field_17" />
   </Weather>
   <WindSettings build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -5770,7 +5411,6 @@
     <field type="byte" name="field_16" />
   </WindSettings>
   <WmoMinimapTexture build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -5778,12 +5418,10 @@
     <field type="byte" name="field_5" />
   </WmoMinimapTexture>
   <WorldBossLockout build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="short" name="field_2" />
   </WorldBossLockout>
   <WorldChunkSounds build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
@@ -5801,7 +5439,6 @@
     <field type="int" name="field_6" />
   </WorldEffect>
   <WorldElapsedTimer build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="byte" name="field_2" />
     <field type="byte" name="field_3" />
@@ -5840,7 +5477,6 @@
     <field type="int" name="field_14" />
   </WorldMapContinent>
   <WorldMapOverlay build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -5858,7 +5494,6 @@
     <field type="short" name="field_15" />
   </WorldMapOverlay>
   <WorldMapTransforms build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="float" name="field_3" />
@@ -5878,7 +5513,6 @@
     <field type="int" name="field_0" />
   </WorldState>
   <WorldStateExpression build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
   </WorldStateExpression>
   <WorldStateUI build="20810">
@@ -5901,7 +5535,6 @@
     <field type="int" name="field_16" />
   </WorldStateUI>
   <WorldStateZoneSounds build="20810">
-    <field type="int" name="field_0" />
     <field type="int" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -5912,7 +5545,6 @@
     <field type="byte" name="field_8" />
   </WorldStateZoneSounds>
   <World_PVP_Area build="20810">
-    <field type="int" name="field_0" />
     <field type="short" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
@@ -5922,27 +5554,23 @@
     <field type="byte" name="field_7" />
   </World_PVP_Area>
   <ZoneIntroMusicTable build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
     <field type="byte" name="field_4" />
   </ZoneIntroMusicTable>
   <ZoneLight build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="short" name="field_2" />
     <field type="short" name="field_3" />
   </ZoneLight>
   <ZoneLightPoint build="20810">
-    <field type="int" name="field_0" />
     <field type="float" name="field_1" />
     <field type="float" name="field_2" />
     <field type="short" name="field_3" />
     <field type="byte" name="field_4" />
   </ZoneLightPoint>
   <ZoneMusic build="20810">
-    <field type="int" name="field_0" />
     <field type="string" name="field_1" />
     <field type="int" name="field_2" />
     <field type="int" name="field_3" />

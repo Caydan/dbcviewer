@@ -2,7 +2,6 @@
 using System.ComponentModel;
 using System.ComponentModel.Composition.Hosting;
 using System.Data;
-using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -134,7 +133,7 @@ namespace DBCViewer
             // hack for *.db2 files v3 (because they don't have FieldsCount)
             bool notDB3 = !(m_dbreader is DB3Reader);
 
-            if (m_fields.Count  != m_dbreader.FieldsCount && notADB && notWDB && notSTL && notDB3)
+            if (m_fields.Count != m_dbreader.FieldsCount && notADB && notWDB && notSTL && notDB3)
             {
                 string msg = String.Format(CultureInfo.InvariantCulture, "{0} has invalid definition!\nFields count mismatch: got {1}, expected {2}", Path.GetFileName(file), m_fields.Count , m_dbreader.FieldsCount);
                 ShowErrorMessageBox(msg);
@@ -157,9 +156,13 @@ namespace DBCViewer
 
                 using (BinaryReader br = row)
                 {
-                    for (int j = 0; j < m_fields.Count; ++j)    // Add cells
+                    int j = 0;
+                    if ((m_dbreader is DB4Reader && ((DB4Reader)m_dbreader).HasSeparateIndexColumn) || m_dbreader is DB4SparseReader)
+                        dataRow[j++] = br.ReadUInt32();
+
+                    for (int c = 0; c < m_fields.Count; ++c, ++j)    // Add cells
                     {
-                        switch (types[j])
+                        switch (types[c])
                         {
                             case "long":
                                 dataRow[j] = br.ReadInt64();
@@ -215,7 +218,7 @@ namespace DBCViewer
                             {
                                 int columns = br.ReadByte();
                                 var sb = new StringBuilder();
-                                for (var c = 0; c < columns; ++c)
+                                for (var c2 = 0; c2 < columns; ++c2)
                                     sb.Append(br.ReadUInt32()).Append(", ");
 
                                 dataRow[j] = sb.ToString();
@@ -351,7 +354,16 @@ namespace DBCViewer
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            XmlAttribute attribute = m_fields[e.ColumnIndex].Attributes["format"];
+            int index = e.ColumnIndex;
+            if ((m_dbreader is DB4Reader && ((DB4Reader)m_dbreader).HasSeparateIndexColumn) || m_dbreader is DB4SparseReader)
+            {
+                if (index == 0)
+                    return;
+
+                --index;
+            }
+
+            XmlAttribute attribute = m_fields[index].Attributes["format"];
 
             if (attribute == null)
                 return;

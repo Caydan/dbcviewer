@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using System.Windows.Forms;
 
 namespace DBCViewer
 {
@@ -46,7 +45,7 @@ namespace DBCViewer
                 }
 
                 RecordsCount = reader.ReadInt32();
-                FieldsCount = reader.ReadInt32() + 1;
+                FieldsCount = reader.ReadInt32();
                 RecordSize = reader.ReadInt32();
                 int offsetsPos = reader.ReadInt32();
 
