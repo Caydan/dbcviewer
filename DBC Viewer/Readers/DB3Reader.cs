@@ -8,12 +8,14 @@ namespace DBCViewer
     class DB3Reader : IWowClientDBReader
     {
         private const int HeaderSize = 48;
-        private const uint DB3FmtSig = 0x33424457;          // WDB3
+        public const uint DB3FmtSig = 0x33424457;          // WDB3
 
         public int RecordsCount { get; private set; }
         public int FieldsCount { get; private set; }
         public int RecordSize { get; private set; }
         public int StringTableSize { get; private set; }
+        public bool HasSeparateIndexColumn { get { return false; } }
+        public bool HasInlineStrings { get { return false; } }
 
         public Dictionary<int, string> StringTable { get; private set; }
 
@@ -30,6 +32,11 @@ namespace DBCViewer
             }
         }
 
+        public string GetIntLength(int index)
+        {
+            return null;
+        }
+
         public DB3Reader(string fileName)
         {
             using (var reader = BinaryReaderExtensions.FromFile(fileName))
@@ -41,7 +48,7 @@ namespace DBCViewer
 
                 if (reader.ReadUInt32() != DB3FmtSig)
                 {
-                    throw new InvalidDataException(String.Format("File {0} isn't valid DB2 file!", fileName));
+                    throw new InvalidDataException(String.Format("File {0} isn't valid DB3 file!", fileName));
                 }
 
                 RecordsCount = reader.ReadInt32();

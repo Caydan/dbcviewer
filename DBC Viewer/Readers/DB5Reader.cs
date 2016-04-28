@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Text;
+using System.Xml;
 
 namespace DBCViewer
 {
-    class DB4Reader : IWowClientDBReader
+    class DB5Reader : IWowClientDBReader
     {
-        private const int HeaderSize = 52;
-        public const uint DB4FmtSig = 0x34424457;          // WDB4
+        private const int HeaderSize = 48;
+        public const uint DB5FmtSig = 0x35424457;          // WDB5
 
         public int RecordsCount { get; private set; }
         public int FieldsCount { get; private set; }
@@ -20,6 +22,9 @@ namespace DBCViewer
         public Dictionary<int, string> StringTable { get; private set; }
 
         private SortedDictionary<int, byte[]> Lookup = new SortedDictionary<int, byte[]>();
+
+        private short[] FieldOffsets { get; set; }
+        private short[] FieldBitSizes { get; set; }
 
         public IEnumerable<BinaryReader> Rows
         {
@@ -34,21 +39,51 @@ namespace DBCViewer
 
         public string GetIntLength(int index)
         {
+            switch (4 - FieldBitSizes[index] / 8)
+            {
+                case 1:
+                    return "byte";
+                case 2:
+                    return "short";
+                case 3:
+                    return "int24";
+                case 4:
+                    return "int";
+                default:
+                    break;
+            }
+
             return null;
         }
 
-        public DB4Reader(string fileName)
+        public DB5Reader(string fileName, XmlElement definition)
         {
+            var fields = definition.GetElementsByTagName("field");
+
+            var db5index = 0;
+            XmlNodeList indexes = definition.GetElementsByTagName("index");
+            if (indexes.Count == 1)
+            {
+                for (var j = 0; j < fields.Count; ++j)
+                {
+                    if (fields[j].Attributes["name"].Value == indexes[0]["primary"].InnerText)
+                    {
+                        db5index = j;
+                        break;
+                    }
+                }
+            }
+
             using (var reader = BinaryReaderExtensions.FromFile(fileName))
             {
                 if (reader.BaseStream.Length < HeaderSize)
                 {
-                    throw new InvalidDataException(String.Format("File {0} is corrupted!", fileName));
+                    throw new InvalidDataException(string.Format("File {0} is corrupted!", fileName));
                 }
 
-                if (reader.ReadUInt32() != DB4FmtSig)
+                if (reader.ReadUInt32() != DB5FmtSig)
                 {
-                    throw new InvalidDataException(String.Format("File {0} isn't valid DB4 file!", fileName));
+                    throw new InvalidDataException(string.Format("File {0} isn't valid DB5 file!", fileName));
                 }
 
                 RecordsCount = reader.ReadInt32();
@@ -58,7 +93,6 @@ namespace DBCViewer
 
                 uint tableHash = reader.ReadUInt32();
                 uint build = reader.ReadUInt32();
-                uint unk1 = reader.ReadUInt32();
 
                 int MinId = reader.ReadInt32();
                 int MaxId = reader.ReadInt32();
@@ -66,8 +100,19 @@ namespace DBCViewer
                 int CopyTableSize = reader.ReadInt32();
                 int metaFlags = reader.ReadInt32();
 
-                int stringTableStart = HeaderSize + RecordsCount * RecordSize;
-                int stringTableEnd = stringTableStart + StringTableSize;
+                FieldOffsets = new short[FieldsCount];
+                FieldBitSizes = new short[FieldsCount];
+
+                for (var i = 0; i < FieldsCount; ++i)
+                {
+                    FieldBitSizes[i] = reader.ReadInt16();
+                    FieldOffsets[i] = reader.ReadInt16();
+                }
+
+                var headerEnd = reader.BaseStream.Position;
+
+                var stringTableStart = headerEnd + RecordsCount * RecordSize;
+                var stringTableEnd = stringTableStart + StringTableSize;
 
                 // Index table
                 int[] m_indexes = null;
@@ -84,7 +129,7 @@ namespace DBCViewer
                 }
 
                 // Records table
-                reader.BaseStream.Position = HeaderSize;
+                reader.BaseStream.Position = headerEnd;
 
                 for (int i = 0; i < RecordsCount; i++)
                 {
@@ -101,7 +146,9 @@ namespace DBCViewer
                     }
                     else
                     {
-                        Lookup.Add(BitConverter.ToInt32(recordBytes, 0), recordBytes);
+                        var idBytes = new byte[4];
+                        Array.Copy(recordBytes, FieldOffsets[db5index], idBytes, 0, 4 - FieldBitSizes[db5index] / 8);
+                        Lookup.Add(BitConverter.ToInt32(idBytes, 0), recordBytes);
                     }
                 }
 
@@ -112,7 +159,7 @@ namespace DBCViewer
 
                 while (reader.BaseStream.Position != stringTableEnd)
                 {
-                    int index = (int)reader.BaseStream.Position - stringTableStart;
+                    int index = (int)(reader.BaseStream.Position - stringTableStart);
                     StringTable[index] = reader.ReadStringNull();
                 }
 

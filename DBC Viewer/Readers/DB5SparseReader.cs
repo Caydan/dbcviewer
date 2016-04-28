@@ -5,10 +5,10 @@ using System.Text;
 
 namespace DBCViewer
 {
-    class DB4SparseReader : IWowClientDBReader
+    class DB5SparseReader : IWowClientDBReader
     {
         private const int HeaderSize = 52;
-        public const uint DB4FmtSig = 0x34424457;          // WDB4
+        public const uint DB5FmtSig = 0x35424457;          // WDB4
 
         public int RecordsCount { get; private set; }
         public int FieldsCount { get; private set; }
@@ -20,6 +20,9 @@ namespace DBCViewer
         public Dictionary<int, string> StringTable { get; private set; }
 
         private SortedDictionary<int, byte[]> RowData = new SortedDictionary<int, byte[]>();
+
+        private short[] FieldOffsets { get; set; }
+        private short[] FieldBitSizes { get; set; }
 
         public IEnumerable<BinaryReader> Rows
         {
@@ -34,10 +37,24 @@ namespace DBCViewer
 
         public string GetIntLength(int index)
         {
+            switch (4 - FieldBitSizes[index] / 8)
+            {
+                case 1:
+                    return "byte";
+                case 2:
+                    return "short";
+                case 3:
+                    return "int24";
+                case 4:
+                    return "int";
+                default:
+                    break;
+            }
+
             return null;
         }
 
-        public DB4SparseReader(string fileName)
+        public DB5SparseReader(string fileName)
         {
             using (var reader = BinaryReaderExtensions.FromFile(fileName))
             {
@@ -46,9 +63,9 @@ namespace DBCViewer
                     throw new InvalidDataException(String.Format("File {0} is corrupted!", fileName));
                 }
 
-                if (reader.ReadUInt32() != DB4FmtSig)
+                if (reader.ReadUInt32() != DB5FmtSig)
                 {
-                    throw new InvalidDataException(String.Format("File {0} isn't valid DB4 sparse file!", fileName));
+                    throw new InvalidDataException(String.Format("File {0} isn't valid DB5 sparse file!", fileName));
                 }
 
                 RecordsCount = reader.ReadInt32();
@@ -58,13 +75,21 @@ namespace DBCViewer
 
                 uint tableHash = reader.ReadUInt32();
                 uint build = reader.ReadUInt32();
-                uint unk1 = reader.ReadUInt32();
 
                 int MinId = reader.ReadInt32();
                 int MaxId = reader.ReadInt32();
                 int locale = reader.ReadInt32();
                 int CopyTableSize = reader.ReadInt32();
                 int metaFlags = reader.ReadInt32();
+
+                FieldOffsets = new short[FieldsCount];
+                FieldBitSizes = new short[FieldsCount];
+
+                for (var i = 0; i < FieldsCount; ++i)
+                {
+                    FieldBitSizes[i] = reader.ReadInt16();
+                    FieldOffsets[i] = reader.ReadInt16();
+                }
 
                 reader.BaseStream.Position = offsetsPos;
 

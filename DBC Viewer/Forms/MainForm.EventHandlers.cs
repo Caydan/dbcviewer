@@ -67,7 +67,7 @@ namespace DBCViewer
             }
             else
             {
-                if (!(m_dbreader is WDBReader) && !(m_dbreader is STLReader) && !(m_dbreader is DB4SparseReader))
+                if (!(m_dbreader is STLReader) && !m_dbreader.HasInlineStrings)
                     val = (uint)(from k in m_dbreader.StringTable where string.Compare(k.Value, (string)value, StringComparison.Ordinal) == 0 select k.Key).FirstOrDefault();
             }
 
@@ -81,8 +81,8 @@ namespace DBCViewer
             try
             {
                 string strval;
-                if (!(m_dbreader is DB4SparseReader))
-                    strval = !(m_dbreader is WDBReader) ? m_dbreader.StringTable[(int)val] : String.Empty;
+                if (!m_dbreader.HasInlineStrings)
+                    strval = m_dbreader.StringTable[(int)val];
                 else
                     strval = (string)value;
 
@@ -108,7 +108,7 @@ namespace DBCViewer
 
             try
             {
-                m_dbreader = DBReaderFactory.GetReader(file);
+                m_dbreader = DBReaderFactory.GetReader(file, m_definition);
             }
             catch (Exception ex)
             {
@@ -120,9 +120,18 @@ namespace DBCViewer
             m_fields = m_definition.GetElementsByTagName("field");
 
             string[] types = new string[m_fields.Count];
+            int[] sizes = new int[m_fields.Count];
 
             for (int j = 0; j < m_fields.Count; ++j)
+            {
                 types[j] = m_fields[j].Attributes["type"].Value;
+                sizes[j] = int.Parse(m_fields[j].Attributes["size"]?.Value ?? "1");
+            }
+
+            m_formats = new XmlAttribute[sizes.Sum()];
+            for (int j = 0, k = 0; j < m_fields.Count; ++j, ++k)
+                for (var s = 0; s < sizes[j]; ++s)
+                    m_formats[k] = m_fields[j].Attributes["format"];
 
             // hack for *.adb files (because they don't have FieldsCount)
             bool notADB = !(m_dbreader is ADBReader);
@@ -157,75 +166,92 @@ namespace DBCViewer
                 using (BinaryReader br = row)
                 {
                     int j = 0;
-                    if ((m_dbreader is DB4Reader && ((DB4Reader)m_dbreader).HasSeparateIndexColumn) || m_dbreader is DB4SparseReader)
+                    if (m_dbreader.HasSeparateIndexColumn)
                         dataRow[j++] = br.ReadUInt32();
 
-                    for (int c = 0; c < m_fields.Count; ++c, ++j)    // Add cells
+                    for (int c = 0; c < m_fields.Count; ++c)    // Add cells
                     {
-                        switch (types[c])
+                        for (var arrSize = 0; arrSize < sizes[c]; ++arrSize, ++j)
                         {
-                            case "long":
-                                dataRow[j] = br.ReadInt64();
-                                break;
-                            case "ulong":
-                                dataRow[j] = br.ReadUInt64();
-                                break;
-                            case "int":
-                                dataRow[j] = br.ReadInt32();
-                                break;
-                            case "uint":
-                                dataRow[j] = br.ReadUInt32();
-                                break;
-                            case "short":
-                                dataRow[j] = br.ReadInt16();
-                                break;
-                            case "ushort":
-                                dataRow[j] = br.ReadUInt16();
-                                break;
-                            case "sbyte":
-                                dataRow[j] = br.ReadSByte();
-                                break;
-                            case "byte":
-                                dataRow[j] = br.ReadByte();
-                                break;
-                            case "float":
-                                dataRow[j] = br.ReadSingle();
-                                break;
-                            case "double":
-                                dataRow[j] = br.ReadDouble();
-                                break;
-                            case "string":
-                                if (m_dbreader is WDBReader || m_dbreader is DB4SparseReader)
-                                    dataRow[j] = br.ReadStringNull();
-                                else if (m_dbreader is STLReader)
-                                {
-                                    int offset = br.ReadInt32();
-                                    dataRow[j] = (m_dbreader as STLReader).ReadString(offset);
-                                }
-                                else
-                                {
-                                    try
-                                    {
-                                        dataRow[j] = m_dbreader.StringTable[br.ReadInt32()];
-                                    }
-                                    catch
-                                    {
-                                        dataRow[j] = "Invalid string index!";
-                                    }
-                                }
-                                break;
-                            case "intarray":
+                            var type = types[c];
+                            if (type == "int" || type == "uint")
                             {
-                                int columns = br.ReadByte();
-                                var sb = new StringBuilder();
-                                for (var c2 = 0; c2 < columns; ++c2)
-                                    sb.Append(br.ReadUInt32()).Append(", ");
-
-                                dataRow[j] = sb.ToString();
-                                break;
+                                var typeOverride = m_dbreader.GetIntLength(c);
+                                if (typeOverride != null)
+                                    type = typeOverride;
                             }
-                            default:
-                                throw new ArgumentException(String.Format(CultureInfo.InvariantCulture, "Unknown field type {0}!", types[j]));
+
+                            switch (type)
+                            {
+                                case "long":
+                                    dataRow[j] = br.ReadInt64();
+                                    break;
+                                case "ulong":
+                                    dataRow[j] = br.ReadUInt64();
+                                    break;
+                                case "int":
+                                    dataRow[j] = br.ReadInt32();
+                                    break;
+                                case "uint":
+                                    dataRow[j] = br.ReadUInt32();
+                                    break;
+                                case "short":
+                                    dataRow[j] = br.ReadInt16();
+                                    break;
+                                case "ushort":
+                                    dataRow[j] = br.ReadUInt16();
+                                    break;
+                                case "sbyte":
+                                    dataRow[j] = br.ReadSByte();
+                                    break;
+                                case "byte":
+                                    dataRow[j] = br.ReadByte();
+                                    break;
+                                case "float":
+                                    dataRow[j] = br.ReadSingle();
+                                    break;
+                                case "double":
+                                    dataRow[j] = br.ReadDouble();
+                                    break;
+                                case "string":
+                                    if (m_dbreader.HasInlineStrings)
+                                        dataRow[j] = br.ReadStringNull();
+                                    else if (m_dbreader is STLReader)
+                                    {
+                                        int offset = br.ReadInt32();
+                                        dataRow[j] = (m_dbreader as STLReader).ReadString(offset);
+                                    }
+                                    else
+                                    {
+                                        try
+                                        {
+                                            dataRow[j] = m_dbreader.StringTable[br.ReadInt32()];
+                                        }
+                                        catch
+                                        {
+                                            dataRow[j] = "Invalid string index!";
+                                        }
+                                    }
+                                    break;
+                                case "intarray":
+                                    {
+                                        int columns = br.ReadByte();
+                                        var sb = new StringBuilder();
+                                        for (var c2 = 0; c2 < columns; ++c2)
+                                            sb.Append(br.ReadUInt32()).Append(", ");
+
+                                        dataRow[j] = sb.ToString();
+                                        break;
+                                    }
+                                case "int24":
+                                    dataRow[j] = br.ReadInt24();
+                                    break;
+                                case "uint24":
+                                    dataRow[j] = br.ReadUInt24();
+                                    break;
+                                default:
+                                    throw new ArgumentException(string.Format(CultureInfo.InvariantCulture, "Unknown field type {0}!", type));
+                            }
                         }
                     }
                 }
@@ -355,7 +381,7 @@ namespace DBCViewer
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             int index = e.ColumnIndex;
-            if ((m_dbreader is DB4Reader && ((DB4Reader)m_dbreader).HasSeparateIndexColumn) || m_dbreader is DB4SparseReader)
+            if (m_dbreader.HasSeparateIndexColumn)
             {
                 if (index == 0)
                     return;
@@ -363,7 +389,7 @@ namespace DBCViewer
                 --index;
             }
 
-            XmlAttribute attribute = m_fields[index].Attributes["format"];
+            XmlAttribute attribute = m_formats[index];
 
             if (attribute == null)
                 return;

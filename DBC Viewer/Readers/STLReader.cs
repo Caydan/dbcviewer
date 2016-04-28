@@ -5,46 +5,46 @@ using System.Text;
 
 namespace DBCViewer
 {
-    struct MPQHeader	// sizeof 0x10
+    struct MPQHeader    // sizeof 0x10
     {
-        public uint mpqMagicNumber;	// MPQ file magic number: 0xDEADBEEF
-        public uint fileTypeId;	// file type or version id (same for all *.gam files)
+        public uint mpqMagicNumber;    // MPQ file magic number: 0xDEADBEEF
+        public uint fileTypeId;    // file type or version id (same for all *.gam files)
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 2)]
-        public uint[] unused;	// always 0x00000000
+        public uint[] unused;    // always 0x00000000
     }
 
-    struct StlHeader	// sizeof 0x28
+    struct StlHeader    // sizeof 0x28
     {
-        public uint stlFileId;	// Stl file Id
+        public uint stlFileId;    // Stl file Id
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 5)]
-        public uint[] unknown1;	// always 0x00000000
-        public uint headerSize;	// size (in bytes) of the StlHeader? (always 0x00000028)
-        public int entriesSize;	// size (in bytes) of the StlEntries
+        public uint[] unknown1;    // always 0x00000000
+        public uint headerSize;    // size (in bytes) of the StlHeader? (always 0x00000028)
+        public int entriesSize;    // size (in bytes) of the StlEntries
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 2)]
-        public uint[] unknown2;	// always 0x00000000
+        public uint[] unknown2;    // always 0x00000000
     }
 
-    struct StlEntry	// sizeof 0x50
+    struct StlEntry    // sizeof 0x50
     {
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 2)]
-        public uint[] unknown1;	// always 0x00000000
-        public uint string1offset;	// file offset for string1 (non-NLS key)
-        public uint string1size;	// size of string1
+        public uint[] unknown1;    // always 0x00000000
+        public uint string1offset;    // file offset for string1 (non-NLS key)
+        public uint string1size;    // size of string1
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 2)]
-        public uint[] unknown2;	// always 0x00000000
-        public uint string2offset;	// file offset for string2
-        public uint string2size;	// size of string2
+        public uint[] unknown2;    // always 0x00000000
+        public uint string2offset;    // file offset for string2
+        public uint string2size;    // size of string2
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 2)]
-        public uint[] unknown3;	// always 0x00000000
-        public uint string3offset;	// file offset for string3
-        public uint string3size;	// size of string3
+        public uint[] unknown3;    // always 0x00000000
+        public uint string3offset;    // file offset for string3
+        public uint string3size;    // size of string3
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 2)]
-        public uint[] unknown4;	// always 0x00000000
-        public uint string4offset;	// file offset for string4
-        public uint string4size;	// size of string4
-        public uint unknown5;	// always 0xFFFFFFFF
+        public uint[] unknown4;    // always 0x00000000
+        public uint string4offset;    // file offset for string4
+        public uint string4size;    // size of string4
+        public uint unknown5;    // always 0xFFFFFFFF
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 3)]
-        public uint[] unknown6;	// always 0x00000000
+        public uint[] unknown6;    // always 0x00000000
     }
 
     class STLReader : IWowClientDBReader
@@ -53,6 +53,8 @@ namespace DBCViewer
         public int FieldsCount { get; private set; }
         public int RecordSize { get; private set; }
         public int StringTableSize { get; private set; }
+        public bool HasSeparateIndexColumn { get { return false; } }
+        public bool HasInlineStrings { get { return false; } }
 
         public Dictionary<int, string> StringTable { get; private set; }
 
@@ -67,6 +69,11 @@ namespace DBCViewer
                     yield return new BinaryReader(new MemoryStream(m_rows[i]), Encoding.UTF8);
                 }
             }
+        }
+
+        public string GetIntLength(int index)
+        {
+            return null;
         }
 
         private BinaryReader reader;

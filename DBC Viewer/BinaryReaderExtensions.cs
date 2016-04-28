@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 
@@ -66,7 +67,7 @@ namespace DBCViewer
     {
         public static BinaryReader FromFile(string fileName)
         {
-            return new BinaryReader(new FileStream(fileName, FileMode.Open), Encoding.UTF8);
+            return new BinaryReader(new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.Read), Encoding.UTF8);
         }
 
         #region ReadPackedGuid
@@ -193,6 +194,26 @@ namespace DBCViewer
             reader.BaseStream.Position = currentPos;
             return bytes;
         }
-#endregion
+        #endregion
+
+        #region ReadInt24
+        /// <summary>
+        ///  Reads a 3-byte signed integer from the current stream and advances the current position of the stream by three bytes.
+        /// </summary>
+        public static int ReadInt24(this BinaryReader reader)
+        {
+            return BitConverter.ToInt32(reader.ReadBytes(3).Concat(new byte[1] { 0 }).ToArray(), 0);
+        }
+        #endregion
+
+        #region ReadUInt24
+        /// <summary>
+        ///  Reads a 3-byte unsigned integer from the current stream and advances the current position of the stream by three bytes.
+        /// </summary>
+        public static uint ReadUInt24(this BinaryReader reader)
+        {
+            return BitConverter.ToUInt32(reader.ReadBytes(3).Concat(new byte[1] { 0 }).ToArray(), 0);
+        }
+        #endregion
     }
 }

@@ -14,6 +14,8 @@ namespace DBCViewer
         public int FieldsCount { get; private set; }
         public int RecordSize { get; private set; }
         public int StringTableSize { get; private set; }
+        public bool HasSeparateIndexColumn { get { return false; } }
+        public bool HasInlineStrings { get { return false; } }
 
         public Dictionary<int, string> StringTable { get; private set; }
 
@@ -30,6 +32,11 @@ namespace DBCViewer
                     yield return new BinaryReader(new MemoryStream(m_rows[i]), Encoding.UTF8);
                 }
             }
+        }
+
+        public string GetIntLength(int index)
+        {
+            return null;
         }
 
         public DBCReader(string fileName)

@@ -20,6 +20,7 @@ namespace DBCViewer
         private DefinitionSelect m_selector;
         private XmlDocument m_definitions;
         private XmlNodeList m_fields;
+        private XmlAttribute[] m_formats;
         private AggregateCatalog m_catalog;
         private XmlElement m_definition;        // definition for current file
         private string m_dbcName;               // file name without extension
@@ -162,51 +163,57 @@ namespace DBCViewer
 
         private void CreateColumns()
         {
-            if ((m_dbreader is DB4Reader && ((DB4Reader)m_dbreader).HasSeparateIndexColumn) || m_dbreader is DB4SparseReader)
+            if (m_dbreader.HasSeparateIndexColumn)
                 m_dataTable.Columns.Add("ID", typeof(uint));
 
             foreach (XmlElement field in m_fields)
             {
-                var colName = field.Attributes["name"].Value;
-
-                switch (field.Attributes["type"].Value)
+                var size = int.Parse(field.Attributes["size"]?.Value ?? "1");
+                for (var s = 0; s < size; ++s)
                 {
-                    case "long":
-                        m_dataTable.Columns.Add(colName, typeof(long));
-                        break;
-                    case "ulong":
-                        m_dataTable.Columns.Add(colName, typeof(ulong));
-                        break;
-                    case "int":
-                        m_dataTable.Columns.Add(colName, typeof(int));
-                        break;
-                    case "uint":
-                        m_dataTable.Columns.Add(colName, typeof(uint));
-                        break;
-                    case "short":
-                        m_dataTable.Columns.Add(colName, typeof(short));
-                        break;
-                    case "ushort":
-                        m_dataTable.Columns.Add(colName, typeof(ushort));
-                        break;
-                    case "sbyte":
-                        m_dataTable.Columns.Add(colName, typeof(sbyte));
-                        break;
-                    case "byte":
-                        m_dataTable.Columns.Add(colName, typeof(byte));
-                        break;
-                    case "float":
-                        m_dataTable.Columns.Add(colName, typeof(float));
-                        break;
-                    case "double":
-                        m_dataTable.Columns.Add(colName, typeof(double));
-                        break;
-                    case "string":
-                    case "intarray":
-                        m_dataTable.Columns.Add(colName, typeof(string));
-                        break;
-                    default:
-                        throw new ArgumentException(String.Format(CultureInfo.InvariantCulture, "Unknown field type {0}!", field.Attributes["type"].Value));
+                    var colName = field.Attributes["name"].Value;
+                    if (size != 1)
+                        colName += "[" + s + "]";
+
+                    switch (field.Attributes["type"].Value)
+                    {
+                        case "long":
+                            m_dataTable.Columns.Add(colName, typeof(long));
+                            break;
+                        case "ulong":
+                            m_dataTable.Columns.Add(colName, typeof(ulong));
+                            break;
+                        case "int":
+                            m_dataTable.Columns.Add(colName, typeof(int));
+                            break;
+                        case "uint":
+                            m_dataTable.Columns.Add(colName, typeof(uint));
+                            break;
+                        case "short":
+                            m_dataTable.Columns.Add(colName, typeof(short));
+                            break;
+                        case "ushort":
+                            m_dataTable.Columns.Add(colName, typeof(ushort));
+                            break;
+                        case "sbyte":
+                            m_dataTable.Columns.Add(colName, typeof(sbyte));
+                            break;
+                        case "byte":
+                            m_dataTable.Columns.Add(colName, typeof(byte));
+                            break;
+                        case "float":
+                            m_dataTable.Columns.Add(colName, typeof(float));
+                            break;
+                        case "double":
+                            m_dataTable.Columns.Add(colName, typeof(double));
+                            break;
+                        case "string":
+                        case "intarray":
+                            m_dataTable.Columns.Add(colName, typeof(string));
+                            break;
+                        default:
+                            throw new ArgumentException(string.Format(CultureInfo.InvariantCulture, "Unknown field type {0}!", field.Attributes["type"].Value));
+                    }
                 }
             }
         }
@@ -217,23 +224,30 @@ namespace DBCViewer
 
             foreach (XmlElement field in m_fields)
             {
-                var colName = field.Attributes["name"].Value;
-                var type = field.Attributes["type"].Value;
-                var format = field.Attributes["format"] != null ? field.Attributes["format"].Value : String.Empty;
-                var visible = field.Attributes["visible"] != null ? field.Attributes["visible"].Value == "true" : true;
-                var width = field.Attributes["width"] != null ? Convert.ToInt32(field.Attributes["width"].Value, CultureInfo.InvariantCulture) : 100;
+                var size = int.Parse(field.Attributes["size"]?.Value ?? "1");
+                for (var s = 0; s < size; ++s)
+                {
+                    var colName = field.Attributes["name"].Value;
+                    if (size != 1)
+                        colName += "[" + s + "]";
 
-                var item = new ToolStripMenuItem(colName);
-                item.Click += new EventHandler(columnsFilterEventHandler);
-                item.CheckOnClick = true;
-                item.Name = colName;
-                item.Checked = !visible;
-                columnsFilterToolStripMenuItem.DropDownItems.Add(item);
+                    var type = field.Attributes["type"].Value;
+                    var format = field.Attributes["format"] != null ? field.Attributes["format"].Value : string.Empty;
+                    var visible = field.Attributes["visible"] != null ? field.Attributes["visible"].Value == "true" : true;
+                    var width = field.Attributes["width"] != null ? Convert.ToInt32(field.Attributes["width"].Value, CultureInfo.InvariantCulture) : 100;
 
-                dataGridView1.Columns[colName].Visible = visible;
-                dataGridView1.Columns[colName].Width = width;
-                dataGridView1.Columns[colName].AutoSizeMode = GetColumnAutoSizeMode(type, format);
-                dataGridView1.Columns[colName].SortMode = DataGridViewColumnSortMode.Automatic;
+                    var item = new ToolStripMenuItem(colName);
+                    item.Click += new EventHandler(columnsFilterEventHandler);
+                    item.CheckOnClick = true;
+                    item.Name = colName;
+                    item.Checked = !visible;
+                    columnsFilterToolStripMenuItem.DropDownItems.Add(item);
+
+                    dataGridView1.Columns[colName].Visible = visible;
+                    dataGridView1.Columns[colName].Width = width;
+                    dataGridView1.Columns[colName].AutoSizeMode = GetColumnAutoSizeMode(type, format);
+                    dataGridView1.Columns[colName].SortMode = DataGridViewColumnSortMode.Automatic;
+                }
             }
         }
 

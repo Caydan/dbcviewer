@@ -8,12 +8,14 @@ namespace DBCViewer
     class DB2Reader : IWowClientDBReader
     {
         private const int HeaderSize = 48;
-        private const uint DB2FmtSig = 0x32424457;          // WDB2
+        public const uint DB2FmtSig = 0x32424457;          // WDB2
 
         public int RecordsCount { get; private set; }
         public int FieldsCount { get; private set; }
         public int RecordSize { get; private set; }
         public int StringTableSize { get; private set; }
+        public bool HasSeparateIndexColumn { get { return false; } }
+        public bool HasInlineStrings { get { return false; } }
 
         public Dictionary<int, string> StringTable { get; private set; }
 
@@ -28,6 +30,11 @@ namespace DBCViewer
                     yield return new BinaryReader(new MemoryStream(m_rows[i]), Encoding.UTF8);
                 }
             }
+        }
+
+        public string GetIntLength(int index)
+        {
+            return null;
         }
 
         public DB2Reader(string fileName)

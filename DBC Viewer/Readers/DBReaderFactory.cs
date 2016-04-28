@@ -1,11 +1,12 @@
 ﻿using System;
 using System.IO;
+using System.Xml;
 
 namespace DBCViewer
 {
     class DBReaderFactory
     {
-        public static IWowClientDBReader GetReader(string file)
+        public static IWowClientDBReader GetReader(string file, XmlElement definition)
         {
             IWowClientDBReader reader;
 
@@ -13,28 +14,50 @@ namespace DBCViewer
             if (ext == ".DBC")
                 reader = new DBCReader(file);
             else if (ext == ".DB2")
-                try
+            {
+                using (var binaryReader = BinaryReaderExtensions.FromFile(file))
                 {
-                    reader = new DB2Reader(file);
-                }
-                catch
-                {
-                    try
+                    switch (binaryReader.ReadUInt32())
                     {
-                        reader = new DB3Reader(file);
-                    }
-                    catch
-                    {
-                        try
+                        case DB2Reader.DB2FmtSig:
                         {
-                            reader = new DB4Reader(file);
+                            reader = new DB2Reader(file);
+                            break;
                         }
-                        catch
+                        case DB3Reader.DB3FmtSig:
                         {
-                            reader = new DB4SparseReader(file);
+                            reader = new DB2Reader(file);
+                            break;
                         }
+                        case DB4Reader.DB4FmtSig:
+                        {
+                            try
+                            {
+                                reader = new DB4Reader(file);
+                            }
+                            catch
+                            {
+                                reader = new DB4SparseReader(file);
+                            }
+                            break;
+                        }
+                        case DB5Reader.DB5FmtSig:
+                        {
+                            try
+                            {
+                                reader = new DB5Reader(file, definition);
+                            }
+                            catch
+                            {
+                                reader = new DB5SparseReader(file);
+                            }
+                            break;
+                        }
+                        default:
+                            throw new InvalidDataException(string.Format("Unknown file type {0}", ext));
                     }
                 }
+            }
             else if (ext == ".ADB")
                 reader = new ADBReader(file);
             else if (ext == ".WDB")

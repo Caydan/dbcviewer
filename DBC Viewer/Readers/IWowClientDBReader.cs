@@ -9,7 +9,11 @@ namespace DBCViewer
         int FieldsCount { get; }
         int RecordSize { get; }
         int StringTableSize { get; }
+        bool HasSeparateIndexColumn { get; }
+        bool HasInlineStrings { get; }
         Dictionary<int, string> StringTable { get; }
         IEnumerable<BinaryReader> Rows { get; }
+
+        string GetIntLength(int index);
     }
 }
