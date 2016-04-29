@@ -76,6 +76,7 @@ namespace DBCViewer
                 XmlElement ele = doc.CreateElement("field");
                 ele.SetAttributeNode("type", "").Value = item.SubItems[2].Text;
                 ele.SetAttributeNode("name", "").Value = item.SubItems[1].Text;
+                ele.SetAttributeNode("size", "").Value = item.SubItems[4].Text;
                 newnode.AppendChild(ele);
             }
 
@@ -129,7 +130,8 @@ namespace DBCViewer
                     i.ToString(),
                     field.Attributes["name"].Value,
                     field.Attributes["type"].Value,
-                    IsIndexColumn(field.Attributes["name"].Value, indexes).ToString()}));
+                    IsIndexColumn(field.Attributes["name"].Value, indexes).ToString(),
+                    field.Attributes["size"]?.Value ?? "1"}));
                 i++;
             }
         }
@@ -170,6 +172,7 @@ namespace DBCViewer
                         XmlElement ele = doc.CreateElement("field");
                         ele.SetAttributeNode("type", "").Value = "int";
                         ele.SetAttributeNode("name", "").Value = String.Format("field{0}", i);
+                        ele.SetAttributeNode("size", "").Value = "1";
                         newnode.AppendChild(ele);
                     }
 
@@ -267,6 +270,9 @@ namespace DBCViewer
                     comboBox1.Items.Clear();
                     comboBox1.Items.AddRange(comboBoxItems2);
                     ShowFakeControl(comboBox1);
+                    break;
+                case 4: // arraySize
+                    ShowFakeControl(textBox2);
                     break;
                 default:
                     break;
