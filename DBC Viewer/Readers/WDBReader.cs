@@ -39,7 +39,7 @@ namespace DBCViewer
             {
                 for (int i = 0; i < RecordsCount; ++i)
                 {
-                    yield return new BinaryReader(new MemoryStream(m_rows[i]), Encoding.UTF8);
+                    yield return new BinaryReader(new MemoryStream(m_rows.ElementAt(i).Value), Encoding.UTF8);
                 }
             }
         }
